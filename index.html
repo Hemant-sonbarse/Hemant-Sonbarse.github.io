@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <meta name="description"
+    content="Hemant Sonbarse — Data Analyst based in Nagpur, India. Python, SQL, Power BI, Tableau." />
+  <meta name="author" content="Hemant Sonbarse" />
+  <meta property="og:title" content="Hemant Sonbarse | Data Analyst" />
+  <meta property="og:description" content="Turning data into actionable decisions." />
+  <title>Hemant Sonbarse | Data Analyst</title>
+
+  <!-- ── PRECONNECTS ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- ── FONTS (unchanged) ── -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- ── CDN LIBRARIES (ADDED / UPGRADED) ─────────────────────────────
+       AOS  2.3.1  — scroll-reveal animations (existing, kept)
+       GSAP 3.12   — hero entrance, card hover, section stagger (NEW)
+       Typed.js 2.1— hero typewriter (replaces custom engine)  (NEW)
+       Particles.js— hero background particle network           (NEW)
+       Lenis 1.x   — smooth scrolling                               (NEW)
+  ───────────────────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="">
+
+
+  <!-- Custom cursor dots -->
+  <!-- Cursor glow: 800px radial bloom that softly trails the mouse -->
+  <div id="cursor-glow"></div>
+
+  <!-- ══════════════════════════════ NAV ══════════════════════════════ -->
+  <!-- MODIFIED: transparent at top, gains bg on scroll via JS + CSS -->
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Home">HS<span class="logo-dot">.</span></a>
+
+      <ul class="nav-menu" id="navMenu" role="menubar">
+        <li><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
+        <li><a href="#about" class="nav-link" role="menuitem">About</a></li>
+        <li><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+        <li><a href="#work" class="nav-link" role="menuitem">Work</a></li>
+        <li><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+        <li>
+          <a href="assets/Hemant_Sonbarse_Resume.pdf" target="_blank" rel="noopener" class="btn-resume">
+            Resume <i class="fas fa-external-link-alt"></i>
+          </a>
+        </li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ══════════════════════════════ HERO ══════════════════════════════ -->
+  <!-- MODIFIED: particles-js container added; hero-content animated by GSAP; Typed.js target -->
+  <section id="home" class="hero" aria-label="Introduction">
+
+    <!-- Particles.js background (NEW) -->
+    <div id="particles-js" aria-hidden="true"></div>
+
+    <!-- Retained: grid overlay + ambient glow -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+
+    <div class="hero-wrap">
+      <div class="hero-content">
+        <!-- GSAP animates each child on load (gsap-hero class) -->
+        <div class="eyebrow gsap-hero">
+          <span class="eyebrow-pulse"></span> Available &nbsp;·&nbsp; Nagpur, India
+        </div>
+
+        <h1 class="gsap-hero">
+          <span class="h1-hi">Hi, I'm</span><br />
+          <span class="h1-name">Hemant<br /><em>Sonbarse</em></span>
+        </h1>
+
+        <!-- Typed.js target: span#typed-output (NEW — replaces #typingText span) -->
+        <div class="hero-role gsap-hero">
+          I'm a&nbsp;<span id="typed-output" class="typed-word"></span>
+        </div>
+
+        <p class="hero-sub gsap-hero">
+          Bridging analytics and infrastructure. Building Python &amp; SQL pipelines that feed reliable dashboards.
+          Currently expanding into AWS, Snowflake, and data warehouse architecture.
+        </p>
+
+        <div class="hero-btns gsap-hero">
+          <a href="#work" class="btn btn-primary">View My Work</a>
+          <a href="assets/Hemant_Sonbarse_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+            Download CV <i class="fas fa-download"></i>
+          </a>
+        </div>
+
+        <div class="hero-socials gsap-hero">
+          <a href="https://github.com/Hemant-sonbarse" target="_blank" rel="noopener" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/hemant-sonbarse" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:hemantsonbarse@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- Right side: pixel art GIF + core technology pills -->
+      <div class="hero-visual" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+        <div class="hero-gif-frame">
+          <img src="assets/coding.gif" alt="Retro pixel art coding workspace" class="hero-gif" width="640"
+            height="400" />
+        </div>
+        <!-- Core Technologies row — matches reference design -->
+        <div class="hero-tech-row">
+          <span class="tech-label">CORE TECHNOLOGIES</span>
+          <div class="tech-pills">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Excel</span>
+            <span>Power BI</span>
+            <span>Tableau</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>scroll down</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ ABOUT ══════════════════════════════ -->
+  <!-- AOS animations retained; data-aos attributes unchanged -->
+  <section id="about" class="about s-pad" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="s-chip" data-aos="fade-up"><span>01 — About</span></div>
+      <h2 id="about-heading" class="s-title" data-aos="fade-up" data-aos-delay="60">
+        From dashboards to <br /><em>data architecture</em>
+      </h2>
+
+      <div class="about-grid">
+        <div class="about-photo" data-aos="fade-right" data-aos-duration="1000">
+          <div class="photo-frame">
+            <img src="assets/your-photo.jpg" alt="Hemant Sonbarse" loading="lazy" width="480" height="520" />
+            <div class="photo-accent" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="about-copy" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+          <p class="copy-lead">
+            I started the usual way, cleaning Excel files and building Power BI reports that answered "what happened."
+            Today I
+            build systems that answer "what's possible."
+          </p>
+
+          <p class="copy-body">
+            The shift happened when I realized my insights were only as good as the pipelines feeding them. So I started
+            building those too. Python ETL scripts, Snowflake warehouses, automated workflows that don't break when the
+            data grows.
+          </p>
+
+          <p class="copy-body">
+            I still translate numbers for stakeholders. But now I also design the infrastructure that makes those
+            numbers trustworthy.
+          </p>
+
+          <ul class="quick-facts">
+            <li><i class="fas fa-map-marker-alt"></i> Nagpur, Maharashtra, India</li>
+            <li><i class="fas fa-graduation-cap"></i> B.Tech. Electronics &amp; Communication, IIITDM Jabalpur</li>
+            <li><i class="fas fa-envelope"></i> hemantsonbarse@gmail.com</li>
+            <li><i class="fas fa-phone"></i> +91-9561893499</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ SKILLS ══════════════════════════════ -->
+  <section id="skills" class="skills s-pad" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="s-chip" data-aos="fade-up"><span>02 — Skills</span></div>
+      <h2 id="skills-heading" class="s-title" data-aos="fade-up" data-aos-delay="60">
+        From analysis to <br /><em>engineering</em>
+      </h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="80">
+        I started in analytics and am now expanding into data engineering to build reliable, production grade data
+        systems.
+      </p>
+
+      <div class="skills-stack">
+        <!-- Connector line (Desktop) -->
+        <div class="stack-line"></div>
+
+        <!-- CARD 1 -->
+        <div class="skill-card card-1" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-num">01</div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3>Core Analytics</h3>
+              <span class="badge badge-ready">Production Ready</span>
+            </div>
+            <div class="card-skills">
+              SQL · Python · Excel · Power BI · Tableau · Statistics · Data Cleaning · Data Visualization · Exploratory
+              Data Analysis
+            </div>
+          </div>
+        </div>
+
+        <div class="card-arrow" aria-hidden="true">↓</div>
+
+        <!-- CARD 2 (Focal Point) -->
+        <div class="skill-card card-2 focal" data-aos="fade-up" data-aos-delay="150">
+          <div class="card-num">02</div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3>Data Engineering</h3>
+              <span class="badge badge-dev">In Development</span>
+            </div>
+            <div class="card-skills">
+              SQL (Advanced) · AWS · Snowflake · ETL/ELT · Data Modeling · dbt
+            </div>
+          </div>
+        </div>
+
+        <div class="card-arrow" aria-hidden="true">↓</div>
+
+        <!-- CARD 3 -->
+        <div class="skill-card card-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-num">03</div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3>Tools & Technologies</h3>
+            </div>
+            <div class="card-skills">
+              Git · GitHub · Jupyter Notebook · Pandas · NumPy · Matplotlib · Seaborn
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ WORK ══════════════════════════════ -->
+  <!-- MODIFIED: proj-card gets GSAP tilt + glow on hover via JS -->
+  <section id="work" class="work s-pad" aria-labelledby="work-heading">
+    <div class="container">
+      <div class="s-chip" data-aos="fade-up"><span>03 — Work</span></div>
+      <h2 id="work-heading" class="s-title" data-aos="fade-up" data-aos-delay="60">
+        Featured <em>projects</em>
+      </h2>
+
+      <div class="filters" data-aos="fade-up" data-aos-delay="120" role="group" aria-label="Filter by technology">
+        <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="python" aria-pressed="false">Python</button>
+        <button class="filter-btn" data-filter="sql" aria-pressed="false">SQL</button>
+        <button class="filter-btn" data-filter="powerbi" aria-pressed="false">Power BI</button>
+        <button class="filter-btn" data-filter="tableau" aria-pressed="false">Tableau</button>
+        <button class="filter-btn" data-filter="excel" aria-pressed="false">Excel</button>
+      </div>
+
+      <div class="proj-grid" id="projectsGrid">
+
+        <article class="proj-card" data-cat="python sql powerbi" data-aos="fade-up" data-aos-delay="100">
+          <div class="proj-img-wrap">
+            <img src="assets/uber.png" alt="Uber Rides Analysis" loading="lazy" width="800" height="450" />
+            <div class="proj-hover-overlay">
+              <a href="https://github.com/Hemant-sonbarse/Uber-Rides-Analysis" target="_blank" rel="noopener"
+                class="overlay-btn">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+            <div class="proj-index" aria-hidden="true">01</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="t-py">Python</span>
+              <span class="t-sq">SQL</span>
+              <span class="t-pbi">Power BI</span>
+            </div>
+            <h3>Uber Rides Analysis</h3>
+            <p>Analyzed 150K+ Uber ride records using Python and SQL, revealing driver
+              cancellations 2.5× higher than customers and estimating ₹5M in potential
+              revenue loss. Built a Power BI dashboard to track demand patterns,
+              cancellations, and revenue trends.</p>
+            <a href="https://github.com/Hemant-sonbarse/Uber-Rides-Analysis" target="_blank" rel="noopener"
+              class="proj-link-text">
+              Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="proj-card" data-cat="powerbi excel" data-aos="fade-up" data-aos-delay="180">
+          <div class="proj-img-wrap">
+            <img src="assets/hospital.png" alt="Hospital Wait-list Dashboard" loading="lazy" width="800" height="450" />
+            <div class="proj-hover-overlay">
+              <a href="https://github.com/Hemant-sonbarse/hospital-waitlist-dashboard" target="_blank" rel="noopener"
+                class="overlay-btn">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+            <div class="proj-index" aria-hidden="true">02</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="t-pbi">Power BI</span>
+              <span class="t-xl">Excel</span>
+            </div>
+            <h3>Hospital Wait-list Dashboard</h3>
+            <p>Analyzed 65K+ patient waitlist records in Power BI, revealing 60% of
+              backlog concentrated in five specialties and longer wait times for
+              patients aged 50+. Built a dashboard to identify backlog distribution
+              and support capacity planning analysis.</p>
+            <a href="https://github.com/Hemant-sonbarse/hospital-waitlist-dashboard" target="_blank" rel="noopener"
+              class="proj-link-text">
+              Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="proj-card" data-cat="tableau sql" data-aos="fade-up" data-aos-delay="260">
+          <div class="proj-img-wrap">
+            <img src="assets/hr.png" alt="HR Analytics Dashboard" loading="lazy" width="800" height="450" />
+            <div class="proj-hover-overlay">
+              <a href="https://github.com/Hemant-sonbarse/HR-Analytics-Dashboard-Tableau" target="_blank" rel="noopener"
+                class="overlay-btn">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+            <div class="proj-index" aria-hidden="true">03</div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-tags">
+              <span class="t-tb">Tableau</span>
+              <span class="t-sq">SQL</span>
+              <span class="t-aws">AWS</span>
+            </div>
+            <h3>HR Analytics Dashboard</h3>
+            <p>Built a Tableau dashboard integrating Snowflake, AWS and SQL data to
+              analyze workforce demographics, revealing attrition trends across tenure
+              groups and providing unified views of headcount, performance, and
+              retention patterns.</p>
+            <a href="https://github.com/Hemant-sonbarse/HR-Analytics-Dashboard-Tableau" target="_blank" rel="noopener"
+              class="proj-link-text">
+              Project Details <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ CONTACT ══════════════════════════════ -->
+  <section id="contact" class="contact s-pad" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="s-chip" data-aos="fade-up"><span>04 — Contact</span></div>
+      <h2 id="contact-heading" class="s-title" data-aos="fade-up" data-aos-delay="60">
+        Let's turn data<br />into <em>decisions</em>
+      </h2>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
+          <p class="contact-lede">Ready to collaborate? Whether it's a full time role, a freelance project, or just a
+            chat about data. I'd love to hear from you. I reply within 24 hours.</p>
+
+          <!-- 3 clickable boxes: Email · LinkedIn · GitHub -->
+          <div class="cinfo-list">
+            <a href="mailto:hemantsonbarse@gmail.com" class="cinfo-row">
+              <span class="cinfo-icon"><i class="fas fa-envelope"></i></span>
+              <span class="cinfo-text"><strong>Email</strong><small>hemantsonbarse@gmail.com</small></span>
+            </a>
+            <a href="https://linkedin.com/in/hemant-sonbarse" target="_blank" rel="noopener" class="cinfo-row">
+              <span class="cinfo-icon"><i class="fab fa-linkedin-in"></i></span>
+              <span class="cinfo-text"><strong>LinkedIn</strong><small>linkedin.com/in/hemant-sonbarse</small></span>
+            </a>
+            <a href="https://github.com/Hemant-sonbarse" target="_blank" rel="noopener" class="cinfo-row">
+              <span class="cinfo-icon"><i class="fab fa-github"></i></span>
+              <span class="cinfo-text"><strong>GitHub</strong><small>github.com/Hemant-sonbarse</small></span>
+            </a>
+          </div>
+
+          <!-- Phone + Location as plain inline items — no boxes -->
+          <div class="cinfo-plain">
+            <span><i class="fas fa-phone"></i> +91-9561893499</span>
+            <span><i class="fas fa-map-marker-alt"></i> Nagpur, Maharashtra, India</span>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
+          <form id="contactForm" class="c-form" action="https://formspree.io/f/mnjbvqdr" method="POST" novalidate>
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"
+              aria-hidden="true" />
+            <input type="hidden" name="_subject" value="Portfolio enquiry — Hemant Sonbarse" />
+
+            <div class="field-row">
+              <div class="field">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="name" placeholder="Your name" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" name="email" placeholder="your@email.com" required
+                  autocomplete="email" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" name="subject" placeholder="What's this about?" />
+            </div>
+            <div class="field">
+              <label for="fmsg">Message</label>
+              <textarea id="fmsg" name="message" rows="5" placeholder="Tell me about your project…" required
+                minlength="10" maxlength="1000"></textarea>
+              <span class="char-cnt" aria-live="polite">0 / 1000</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin"></i> Sending…</span>
+            </button>
+            <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <!-- Top row: logo · nav · socials -->
+      <div class="footer-inner">
+        <a href="#home" class="nav-logo footer-logo" aria-label="Top">HS<span class="logo-dot">.</span></a>
+        <div class="footer-socials">
+          <a href="https://github.com/Hemant-sonbarse" target="_blank" rel="noopener" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/hemant-sonbarse" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:hemantsonbarse@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <!-- Bottom: single centered copyright line -->
+      <div class="footer-copy">
+        <p>Built with <span class="heart">❤️</span> using vanilla JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Theme toggle — fixed top-right, always visible -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+    <i class="fas fa-sun" id="themeIcon"></i>
+  </button>
+
+  <!-- Mobile Menu - Moved to body end for layout independence -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+    <!-- Added tabindex="-1" for programmatic focus -->
+    <div class="mobile-menu-drawer" id="mobileMenuDrawer" tabindex="-1">
+      <div class="drawer-header">
+        <a href="#home" class="nav-logo drawer-logo" aria-label="Home">HS<span class="logo-dot">.</span></a>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="mobile-menu-list" role="menubar">
+        <li><a href="#home" class="mobile-nav-link" role="menuitem">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link" role="menuitem">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link" role="menuitem">Skills</a></li>
+        <li><a href="#work" class="mobile-nav-link" role="menuitem">Work</a></li>
+        <li><a href="#contact" class="mobile-nav-link" role="menuitem">Contact</a></li>
+      </ul>
+      <a href="assets/Hemant_Sonbarse_Resume.pdf" target="_blank" rel="noopener" class="mobile-btn-resume">
+        Resume <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- ── SCRIPTS (order matters) ─────────────────────────────────────────
+       1. AOS      — scroll-reveal (existing)
+       2. GSAP     — hero entrance, float, card hover (NEW)
+       3. Typed.js — typewriter in hero (NEW, replaces custom engine)
+       4. Particles.js — hero background (NEW)
+       5. script.js — custom modules
+  ──────────────────────────────────────────────────────────────────────── -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
