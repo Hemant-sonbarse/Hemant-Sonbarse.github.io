@@ -2230,38 +2230,9 @@ body.light-mode .skill-card.focal:hover {
 
 /* ===== Better tech tag colors in Light Mode ===== */
 
-body.light-mode .t-sq{
-  background:#FEF3C7;
-  color:#92400E;
-  border-color:#F59E0B;
-}
-
-body.light-mode .t-pbi{
-  background:#FEF9C3;
-  color:#854D0E;
-  border-color:#EAB308;
-}
-
-body.light-mode .t-aws{
-  background:#FFEDD5;
-  color:#9A3412;
-  border-color:#F97316;
-}
-
-body.light-mode .t-tb{
-  background:#EDE9FE;
-  color:#5B21B6;
-  border-color:#8B5CF6;
-}
-
-body.light-mode .t-xl{
-  background:#DCFCE7;
-  color:#166534;
-  border-color:#22C55E;
-}
-
-body.light-mode .t-py{
-  background:#EFF6FF;
-  color:#1E40AF;
-  border-color:#3B82F6;
-}
+body.light-mode .t-py { background:#DBEAFE; color:#1E3A8A; border-color:#3B82F6; }
+body.light-mode .t-sq { background:#FDE68A; color:#78350F; border-color:#D97706; }
+body.light-mode .t-pbi{ background:#FEF08A; color:#713F12; border-color:#CA8A04; }
+body.light-mode .t-xl { background:#BBF7D0; color:#14532D; border-color:#16A34A; }
+body.light-mode .t-tb { background:#DDD6FE; color:#4C1D95; border-color:#7C3AED; }
+body.light-mode .t-aws{ background:#FED7AA; color:#7C2D12; border-color:#EA580C; }
