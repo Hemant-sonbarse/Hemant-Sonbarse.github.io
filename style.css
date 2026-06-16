@@ -2227,3 +2227,41 @@ body.light-mode .skill-card.focal:hover {
     opacity: 1 !important
   }
 }
+
+/* ===== Better tech tag colors in Light Mode ===== */
+
+body.light-mode .t-sq{
+  background:#FEF3C7;
+  color:#92400E;
+  border-color:#F59E0B;
+}
+
+body.light-mode .t-pbi{
+  background:#FEF9C3;
+  color:#854D0E;
+  border-color:#EAB308;
+}
+
+body.light-mode .t-aws{
+  background:#FFEDD5;
+  color:#9A3412;
+  border-color:#F97316;
+}
+
+body.light-mode .t-tb{
+  background:#EDE9FE;
+  color:#5B21B6;
+  border-color:#8B5CF6;
+}
+
+body.light-mode .t-xl{
+  background:#DCFCE7;
+  color:#166534;
+  border-color:#22C55E;
+}
+
+body.light-mode .t-py{
+  background:#EFF6FF;
+  color:#1E40AF;
+  border-color:#3B82F6;
+}
